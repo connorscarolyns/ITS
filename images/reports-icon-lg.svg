@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69">
+  <g id="Group_244" data-name="Group 244" transform="translate(-551 -335)">
+    <g id="Group_183" data-name="Group 183" transform="translate(553.388 360.98)">
+      <rect id="Rectangle_107" data-name="Rectangle 107" width="10" height="17" transform="translate(-0.388 26.02)" fill="#f8d44c"/>
+      <rect id="Rectangle_108" data-name="Rectangle 108" width="10" height="31" transform="translate(17.612 12.02)" fill="#f8d44c"/>
+      <rect id="Rectangle_109" data-name="Rectangle 109" width="10" height="28" transform="translate(35.612 15.02)" fill="#f8d44c"/>
+      <rect id="Rectangle_110" data-name="Rectangle 110" width="9" height="43" transform="translate(54.612 0.02)" fill="#f8d44c"/>
+    </g>
+    <g id="Group_171" data-name="Group 171" transform="translate(552 336)">
+      <path id="Union_1" data-name="Union 1" d="M.409,42.594a1.38,1.38,0,0,1,0-1.961L28.325,12.89a1.4,1.4,0,0,1,1.788-.155l13,9.042,19.123-19h-6.4a1.387,1.387,0,1,1,0-2.774h9.731a1.4,1.4,0,0,1,.9.295l0,0,.021.017L66.5.324l.014.012.021.018,0,0a1.406,1.406,0,0,1,.169.18l0,0,.017.022.006.009.013.018L66.755.6l.01.014.01.016.008.012.011.018.006.01.012.021,0,.007.012.023,0,.006.013.025,0,0,.013.026,0,0,.013.026,0,0,.011.026,0,0L66.9.877v0l.01.027,0,.005c0,.009.006.018.009.027l0,.005.009.028a.019.019,0,0,0,0,0l.008.029v0l.008.031v0A1.4,1.4,0,0,1,67,1.413V12.485a1.4,1.4,0,0,1-2.792,0V4.736L44.258,24.561a1.4,1.4,0,0,1-1.788.156l-13-9.044L2.383,42.594a1.4,1.4,0,0,1-1.974,0Z" stroke="#000" stroke-width="1.5"/>
+    </g>
+    <rect id="Rectangle_153" data-name="Rectangle 153" width="69" height="69" transform="translate(551 335)" fill="none"/>
+  </g>
+</svg>

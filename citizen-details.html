@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"><!--Meta data is page specific and should be assess and adjusted on a per page basis.-->
+		<link rel="shortlink" href="https://beta.novascotia.ca/">
+		
+		<title>Citizen Details - Intake Tracking System - Government of Nova Scotia</title>
+
+		<link rel="stylesheet" media="all" href="https://novascotia.ca/clf/fonts/font-awesome/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" media="all" href="https://beta.novascotia.ca/sites/default/files/css/css_9m8-tA3IQf8ThlLQYTTZUyEweCvyR908Tg0XCbKYOfY.css">
+		<link rel="stylesheet" media="all" href="https://beta.novascotia.ca/sites/default/files/css/css_uIYN0sQV7NwuNKcH6_K57Yo4Nz26oGTDZHKB7WNNOwg.css">
+		<link rel="stylesheet" media="all" href="css/service-design.css">
+
+		<!--[if lte IE 8]>
+		<script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div id="container">
+			<!-- -------------------------------------------------- START HEADER --------------------------------------------------- -->
+			<header>
+			<!-- START SALTIRE NS MOTHERSHIP RIBBON w FR -->
+				<nav id="navigation" class="ribbon" role="navigation" aria-label="Main navigation">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="https://novascotia.ca/" hreflang="en"><img class="ribbon-img" src="https://novascotia.ca/clf/ignition/img/nsvip-en-white-flag.svg" alt="Province of Nova Scotia" /></a>
+							</div>
+							<div class="col-xs-6">
+								<a href="/fr" style="float: right; color: #fff; font-weight: bold; margin: 10px 0; text-decoration: none;">Français</a>
+							</div>
+						</div>
+					</div>
+				</nav>	
+			<!-- END SALTIRE NS MOTHERSHIP RIBBON w FR -->
+			</header> <!-- END HEADER  -->
+			
+			<!-- -------------------------------------------------- START NAV --------------------------------------------------- -->
+			<nav class="secondaryNav">
+				<div class="container">
+					<ul id="nav">
+						<li id="nav-add">
+							<a href="add.html" class="active">ADD</a>
+						</li>
+						<li id="nav-search">
+							<a href="#">SEARCH</a>
+						</li>
+						<li id="nav-reports">
+							<a href="#">REPORTS</a>
+						</li>
+					</ul>
+				</div>
+			</nav> <!-- END NAV -->
+			
+			<!-- -------------------------------------------------- START MAIN CONTENT --------------------------------------------------- -->
+
+			<!--A basic page has a primary content area and an optional column for secondary information like related content.-->
+			<div class="container">
+				<div class="row">
+					<main class="col-md-8"><!-- SEMANTIC MAIN TAG TO INDICATE PAGE CONTENT-->
+						<article ><!-- SEMANTIC ARTICLE TAG TO GROUP RELATED CONTENT-->
+							<form name="parameters" method="GET"  target="_parent">
+								<div class="row">
+									<div class="col-md-12">
+										<h1 class="h2">Who is it from?</h1>
+									</div>
+								</div>
+								<section class="row">
+									<div class="col-md-8">
+										<div class="form-group">
+											<label for="citizenDetailsName">Name</label>
+											<input name="citizenDetailsName" autofocus="autofocus" class="fw-20" type="text">
+											<script>
+											  if (!("autofocus" in document.createElement("input"))) {
+												document.getElementById("programAreaList").focus();
+											  }
+											</script>
+										</div>
+										<div class="form-group">
+											<label for="citizenDetailsPhone">Phone</label>
+											<input name="citizenDetailsPhone1" id="form1" class="fw-10" type="tel">
+											<input name="citizenDetailsPhone2" id="form2" style="display: none;" >
+										</div>
+										<div class="form-group">
+											<label for="citizenDetailsEmail">Email</label>
+											<input name="citizenDetailsEmail" class="fw-20" type="email">
+										</div>
+									</div>
+								</section>
+								<section class="row justify-content-md-left">
+									<div class="col-md-auto">
+									<button class="btn-lg btn-default" onclick="location.href='mail-details.html'" type="button">Continue</button>
+									</div>
+									<div class="col-md-auto">
+									<button class="btn-lg btn-2nd" onclick="location.href='index.html'" type="button">Cancel</button>
+									</div>
+								</section>
+							</form>
+						</article>
+					</main><!-- END main content  -->
+
+					<!-- -------------------------------------------------- START aside --------------------------------------------------- -->	
+					<aside class="col-md-4">
+						<div class="summaryContainer">
+							<div class="summaryTitle">
+								<h2 style="color:transparent; margin:0; padding:0">Record Summary<h2><!-- SEMANTIC TITLE FOR SCREEN READERS-->
+							</div>
+							<div class="summarycontent">
+								<section>
+									<!-- Button trigger modal -->
+									<a type="button" class="summaryEdit" href="" data-toggle="modal" data-target="#programAreaModal">Edit</a>
+									<label for="summaryLabelProgramArea" class="summaryLabel">Program Area</label>
+									<p id="summaryLabelProgramArea" class="summaryText">"Selected porgram area"</p>
+									<hr>
+								</section>
+								<section>
+									<div class="summaryEdit summaryEdit summaryEditing">Editing</div>
+									<label for="summaryLabelCitizenName" class="summaryLabel">Name</label>
+									<p id="summaryLabelCitizenName" class="summaryText">"Selected porgram area"</p>
+									<label for="summaryLabelCitizenPhone" class="summaryLabel">Phone</label>
+									<p id="summaryLabelCitizenPhone" class="summaryText">"Selected porgram area"</p>
+									<label for="summaryLabelCitizenEmail" class="summaryLabel">Email</label>
+									<p id="summaryLabelCitizenEmail" class="summaryText">"Selected porgram area"</p>
+									<hr>
+								</section>
+							</div>
+						</div>
+					</aside><!-- /aside -->
+				</div><!-- /row -->
+			</div><!-- /container -->
+
+			<!-- -------------------------------------------------- START FOOTER --------------------------------------------------- -->	
+			<footer id="footer" class="footer" role="contentinfo">
+				<div class="container">
+
+				</div>
+			</footer><!-- END FOOTER -->
+		</div><!-- /container -->
+
+<!---------------------------------------------------------START program Modal ---------------------------------------------------------->
+		
+<div id="programAreaModal" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="programAreaLabel" aria-hidden="true">
+	<div class="modal-dialog modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<label id="programAreaLabel" for="programArea">Program Area</label>
+					<input list="programAreaList" name="programArea" autofocus="autofocus" class="fw-30" aria-describedby="help-text-quickType" >
+						<datalist id="programAreaList">
+						  <option value="01 Accommodation Registry Co">
+						  <option value="02 Business Learning">
+						  <option value="03 Collections">
+						  <option value="04 Corporate Capital Tax">
+						  <option value="06 First Time Home Buyers">
+						  <option value="07 Financial Institution">
+						  <option value="08 Fishing Licensing">
+						  <option value="09 Fuel Tax">
+						  <option value="10 IFTA">
+						  <option value="11 Heating Assistance Rebate Pr">
+						</datalist>
+					</div>
+					<section>
+						<div class="row">
+							<section id="quickTypepPayment" class="quickType col-md">
+								<h3 id="quickTypeListProgram" class="label">Quick Type: Program Area</h3>
+								<ul role="list" aria-labelledby="#quickTypeListProgram" class="col-md-12 programListColumn programList quickTypeList">
+									<li class="programListItem">01 Elevator and Lifts</li>
+									<li class="programListItem">02 RJSC</li>
+									<li class="programListItem">03 Business Licensing</li>
+									<li class="programListItem">04 Road Safety</li>
+									<li class="programListItem">05 IFTA</li>
+									<li class="programListItem">06 Tax Exempt Consumer</li>
+									<li class="programListItem">07 Vehicle Tax</li>
+									<li class="programListItem">08 Refunds</li>
+									<li class="programListItem">09 Fuel Tax</li>
+									<li class="programListItem">10 Tobacco Tax</li>
+									<li class="programListItem">11 Corporate Capital Tax</li>
+									<li class="programListItem">12 Collections</li>
+									<li class="programListItem">13 Special Move Permit</li>
+									<li class="programListItem">14 Hunting License</li>
+									<li class="programListItem">15 Hunting WRC</li>
+									<li class="programListItem">16 Hunting Education Course</li>
+									<li class="programListItem">17 Hunting Deer/Moose Draw</li>
+									<li class="programListItem">18 Fishing License</li>
+									<li class="programListItem">19 Farm Registration</li>
+									<li class="programListItem">20 Fuel Safety</li>
+									<li class="programListItem">21 Financial Institution</li>
+									<li class="programListItem">22 Accommodation Registry Compliance</li>
+									<li class="programListItem">23 Property Tax Rebate for Seniors</li>
+									<li class="programListItem">24 Marriage License</li>
+									<li class="programListItem">25 Your Energy Rebate Program</li>
+									<li class="programListItem">26 Heating Assistance Rebate Program</li>
+									<li class="programListItem">27 Registry of Motor Vehicles/li>
+									<li class="programListItem">28 NSLC Registered Representative</li>
+									<li class="programListItem">29 Home Construct Rebate</li>
+									<li class="programListItem">30 First Time Homebuyer Rebate</li>
+								</ul>
+							</section>
+						</div> <!-- /row-->
+					</section>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn-default btn-lg" data-dismiss="modal">Save changes</button>
+					<button type="button" class="btn-2nd btn-lg" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div> <!-- /modal-->
+		
+	<script>
+	$("input[id='form1']").on("input", function () {
+				$("input[id='form2']").val(destroyMask(this.value));
+				this.value = createMask($("input[id='form2']").val());
+			})
+
+			function createMask(string) {
+				console.log(string)
+				return string.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
+			}
+
+			function destroyMask(string) {
+				console.log(string)
+				return string.replace(/\D/g, '').substring(0, 10);
+			}
+	</script>
+	</body>
+	
+<!--modal-->
+	<!-- JS code -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<!--JS below-->	
+
+</html>
