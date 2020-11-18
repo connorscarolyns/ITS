@@ -76,7 +76,7 @@
 									<div class="col-md-8">
 										<p id="help-text-quickType">Type the "quick type" number or a keyword into the dropdown to select a program, then hit tab.</p>
 										<label for="programArea">Program Area</label>
-											<input list="programAreaList" name="programArea" autofocus="autofocus" class="fw-30" aria-describedby="help-text-quickType" >
+											<input id="programArea" list="programAreaList" name="programArea" autofocus="autofocus" class="fw-30" aria-describedby="help-text-quickType" >
 												<datalist id="programAreaList">
 													<option value="01 Elevator and Lifts">
 													<option value="02 RJSC">
@@ -128,7 +128,7 @@
 							<section>
 								<div class="row">
 									<section id="quickTypepPayment" class="quickType col-md">
-										<h3 id="quickTypeListProgram" class="label">Quick Type: Program Area</h3>
+										<h2 id="quickTypeListProgram" class="label">Quick Type: Program Area</h2>
 										<ul role="list" aria-labelledby="quickTypeListProgram" class="col-md-12 programListColumn programList quickTypeList">
 											<li class="programListItem">01 Elevator and Lifts</li>
 											<li class="programListItem">02 RJSC</li>
@@ -174,12 +174,12 @@
 					<aside class="col-md-4">
 						<div class="summaryContainer">
 							<div class="summaryTitle">
-								<h2 style="color:transparent; margin:0; padding:0">Record Summary<h2><!-- SEMANTIC TITLE FOR SCREEN READERS-->
+								<h2 style="color:#dddddd; margin:0; padding:0">Record Summary<h2><!-- SEMANTIC TITLE FOR SCREEN READERS-->
 							</div>
 							<div class="summarycontent">
 								<section>
 									<a class="summaryEdit summaryEdit">Editing</a>
-									<label for="summaryLabelProgramArea" class="summaryLabel">Program Area</label>
+									<h3 for="summaryLabelProgramArea" class="summaryLabel label">Program Area</h3>
 									<p id="summaryLabelProgramArea" class="summaryText">"Selected porgram area"</p>
 									<hr>
 								</section>
