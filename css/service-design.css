@@ -562,7 +562,7 @@ legend h1, legend h2, legend h3, legend h4, legend h5, h1.label, h2.label, h3.la
     top: -35px;
     z-index: 2;
     color: #fff;
-    left: 36px;
+    left: 24px;
     font-weight: 600;
     font-size: 1.15em;
 }
@@ -570,7 +570,7 @@ legend h1, legend h2, legend h3, legend h4, legend h5, h1.label, h2.label, h3.la
 .summaryTitle:after {
 	content: "";
     height: 45px;
-    left: 12px;
+    left: 0;
     z-index: 1;
     position: absolute;
     top: -50px;
@@ -581,11 +581,13 @@ legend h1, legend h2, legend h3, legend h4, legend h5, h1.label, h2.label, h3.la
     border-right: 28px solid transparent;
 }
 
+.summaryTitle{
+    position:absolute;
+}
 .summaryTitle h2{
     color: transparent;
     margin: 0;
     padding: 0;
-    font-size: 1px;
 }
 .summaryEdit{
 	float:right;
