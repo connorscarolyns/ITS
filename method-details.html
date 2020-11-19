@@ -69,7 +69,7 @@
 							<form name="parameters" method="GET"  target="_parent">
 								<div class="row">
 									<div class="col-md-12">
-										<h1 class="h2">What is it?</h1>
+										<h1 class="h2">How did it get here?</h1>
 									</div>
 								</div>
 								<section class="row">
@@ -110,8 +110,8 @@
 									</div>
 									<div class="col-md-6">
 										<section id="quickTypepPayment" class="quickType">
-											<h3 id="quickTypeListPayment" class="label">Quick Type: Method Received</h3>
-											<ul class="quickTypeList" role="list" aria-labelledby="#quickTypeListPayment">
+											<h2 id="quickTypeListPayment" class="label">Quick Type: Method Received</h2>
+											<ul class="quickTypeList" role="list" aria-labelledby="quickTypeListPayment">
 												  <li>01 Fax - interdepartmental</li>
 												  <li>02 Fax - public</li>
 												  <li>03 In person</li>
@@ -136,34 +136,35 @@
 								<section>
 									<!-- Button trigger modal -->
 									<a type="button" class="summaryEdit" href="" data-toggle="modal" data-target="#programAreaModal">Edit</a>
-									<label for="summaryLabelProgramArea" class="summaryLabel">Program Area</label>
+									<h3 for="summaryLabelProgramArea" class="summaryLabel label">Program Area</h3>
 									<p id="summaryLabelProgramArea" class="summaryText">"Selected porgram area"</p>
 									<hr>
 								</section>
 								<section>
+									<!-- Button trigger modal -->
 									<a type="button" class="summaryEdit" href="" data-toggle="modal" data-target="#clientetialsModal">Edit</a>
-									<label for="summaryLabelCitizenName" class="summaryLabel">Name</label>
-									<p id="summaryLabelCitizenName" class="summaryText">"Entered Name"</p>
-									<label for="summaryLabelCitizenPhone" class="summaryLabel">Phone</label>
-									<p id="summaryLabelCitizenPhone" class="summaryText">"Entered Phone"</p>
-									<label for="summaryLabelCitizenEmail" class="summaryLabel">Email</label>
-									<p id="summaryLabelCitizenEmail" class="summaryText">"Entered email"</p>
+									<h3 for="summaryLabelCitizenName" class="summaryLabel label">Name</h3>
+									<p id="summaryLabelCitizenName" class="summaryText">"Selected porgram area"</p>
+									<h3 for="summaryLabelCitizenPhone" class="summaryLabel label">Phone</h3>
+									<p id="summaryLabelCitizenPhone" class="summaryText">"Selected porgram area"</p>
+									<h3 for="summaryLabelCitizenEmail" class="summaryLabel label">Email</h3>
+									<p id="summaryLabelCitizenEmail" class="summaryText">"Selected porgram area"</p>
 									<hr>
 								</section>
 								<section>
 									<a type="button" class="summaryEdit" href="" data-toggle="modal" data-target="#mailDetailssModal">Edit</a>
-									<label for="summaryLabelMailDetailsSubmissionType" class="summaryLabel">Submission type</label>
+									<h3 for="summaryLabelMailDetailsSubmissionType" class="summaryLabel label">Submission type</h3>
 									<p id="summaryLabelMailDetailsSubmissionType" class="summaryText">"Selected Submission Type"</p>
-									<label for="summaryLabelMailDetailsPaymentAmount" class="summaryLabel">Payment amount</label>
+									<h3 for="summaryLabelMailDetailsPaymentAmount" class="summaryLabel label">Payment Amount</h3>
 									<p id="summaryLabelMailDetailsPaymentAmount" class="summaryText">"Entered Payment Amount"</p>
-									<label for="summaryLabelMailDetailsPaymentType" class="summaryLabel">Payment type</label>
+									<h3 for="summaryLabelMailDetailsPaymentType" class="summaryLabel label">Payment Type</h3>
 									<p id="summaryLabelMailDetailsPaymentType" class="summaryText">"Selected Payment Type"</p>
 									<hr>
 								</section>
 									<div class="summaryEdit summaryEdit summaryEditing">Editing</div>
-									<label for="summaryLabelMethodDetailsMethod" class="summaryLabel">Method Recieved</label>
+									<h3 for="summaryLabelMethodDetailsMethod" class="summaryLabe label">Method Recieved</h3>
 									<p id="summaryLabelMethodDetailsMethod" class="summaryText">"Selected Method Recieved"</p>
-									<label for="summaryLabelMethodDetailsDate" class="summaryLabel">Date Recieved</label>
+									<h3 for="summaryLabelMethodDetailsDate" class="summaryLabel label">Date Recieved</h3>
 									<p id="summaryLabelMethodDetailsDate" class="summaryText">"Entered Date Recieved"</p>
 									<hr>
 								</section>
@@ -183,36 +184,57 @@
 
 <!---------------------------------------------------------START program Modal ---------------------------------------------------------->
 		
-<div id="programAreaModal" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="programAreaLabel" aria-hidden="true">
+<div id="programAreaModal" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="editProgramAreaModalTitle" aria-hidden="true">
 	<div class="modal-dialog modal-xl" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
+				<h2 id="editProgramAreaModalTitle" class="modal-title h4" >Edit Program Area</h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
 				<div class="form-group">
-					<label id="programAreaLabel" for="programArea">Program Area</label>
-					<input list="programAreaList" name="programArea" autofocus="autofocus" class="fw-30" aria-describedby="help-text-quickType" >
+					<label id="programAreaLabel" for="programArea">Program area</label>
+					<input id="programArea" list="programAreaList" name="programArea" autofocus="autofocus" class="fw-30" >
 						<datalist id="programAreaList">
-						  <option value="01 Accommodation Registry Co">
-						  <option value="02 Business Learning">
-						  <option value="03 Collections">
-						  <option value="04 Corporate Capital Tax">
-						  <option value="06 First Time Home Buyers">
-						  <option value="07 Financial Institution">
-						  <option value="08 Fishing Licensing">
-						  <option value="09 Fuel Tax">
-						  <option value="10 IFTA">
-						  <option value="11 Heating Assistance Rebate Pr">
+							<option value="01 Elevator and Lifts">
+							<option value="02 RJSC">
+							<option value="03 Business Licensing">
+							<option value="04 Road Safety">
+							<option value="05 IFTA">
+							<option value="06 Tax Exempt Consumer">
+							<option value="07 Vehicle Tax">
+							<option value="08 Refunds">
+							<option value="09 Fuel Tax">
+							<option value="10 Tobacco Tax">
+							<option value="11 Corporate Capital Tax">
+							<option value="12 Collections">
+							<option value="13 Special Move Permit">
+							<option value="14 Hunting License">
+							<option value="15 Hunting WRC">
+							<option value="16 Hunting Education Course">
+							<option value="17 Hunting Deer/Moose Draw">
+							<option value="18 Fishing License">
+							<option value="19 Farm Registration">
+							<option value="20 Fuel Safety">
+							<option value="21 Financial Institution">
+							<option value="22 Accommodation Registry Compliance">
+							<option value="23 Property Tax Rebate for Seniors">
+							<option value="24 Marriage License">
+							<option value="25 Your Energy Rebate Program">
+							<option value="26 Heating Assistance Rebate Program">
+							<option value="27 Registry of Motor Vehicles">
+							<option value="28 NSLC Registered Representative">
+							<option value="29 Home Construct Rebate">
+							<option value="30 First Time Homebuyer Rebate">
 						</datalist>
 					</div>
 					<section>
 						<div class="row">
 							<section id="quickTypepPayment" class="quickType col-md">
 								<h3 id="quickTypeListProgram" class="label">Quick Type: Program Area</h3>
-								<ul role="list" aria-labelledby="#quickTypeListProgram" class="col-md-12 programListColumn programList quickTypeList">
+								<ul role="list" class="col-md-12 programListColumn programList quickTypeList">
 									<li class="programListItem">01 Elevator and Lifts</li>
 									<li class="programListItem">02 RJSC</li>
 									<li class="programListItem">03 Business Licensing</li>
@@ -259,32 +281,28 @@
 		<!---------------------------------------------------------START client details Modal ---------------------------------------------------------->
 		
 		
-		<div id="clientetialsModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="citizenDetailsLabel" aria-hidden="true">
+		<div id="clientetialsModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="editCitizenDetailsModalTitle" aria-hidden="true">
 		  <div class="modal-dialog modal-xl" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">
+				<h2 id="editCitizenDetailsModalTitle" class="modal-title h4" >Citizen Details</h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>
 			  </div>
 				<div class="modal-body">
 					<div class="form-group">
-						<label id="citizenDetailsLabel" for="citizenDetailsName">Name</label>
-						<input name="citizenDetailsName" autofocus="autofocus" class="fw-20" >
-						<script>
-						  if (!("autofocus" in document.createElement("input"))) {
-							document.getElementById("programAreaList").focus();
-						  }
-						</script>
+						<label for="citizenDetailsName">Name</label>
+						<input id="citizenDetailsName" name="citizenDetailsName" autofocus="autofocus" class="fw-20" type="text">
 					</div>
 					<div class="form-group">
 						<label for="citizenDetailsPhone">Phone</label>
-						<input name="citizenDetailsPhone1" id="form1" class="fw-10" >
-						<input name="citizenDetailsPhone2" id="form2" style="display: none;" class="fw-15" >
+						<input name="citizenDetailsPhone1" id="citizenDetailsPhone" class="fw-10" type="tel">
+						<input name="citizenDetailsPhone2" id="citizenDetailsPhone-2" style="display: none;" aria-hidden="true">
 					</div>
 					<div class="form-group">
 						<label for="citizenDetailsEmail">Email</label>
-						<input name="citizenDetailsEmail" class="fw-20" >
+						<input id="citizenDetailsEmail" name="citizenDetailsEmail" class="fw-20" type="email">
 					</div>
 				</div>
 			  <div class="modal-footer">
@@ -297,83 +315,78 @@
 		  
 		<!---------------------------------------------------------START mail details Modal ---------------------------------------------------------->
 		
-		
-		<div id="mailDetailssModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-		  <div class="modal-dialog modal-xl" role="document">
-			<div class="modal-content">
-			  <div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				  <span aria-hidden="true">&times;</span>
-				</button>
-			  </div>
-				<div class="modal-body">
-					<div class="form-group">
-					<label for="submissionType">Submission type</label>
-						<input id="submissionType" list="submissionTypeList" name="submissionType" autofocus="autofocus" class="fw-15">
+		<div id="mailDetailssModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="editMailDetailsModalTitle" aria-hidden="true">
+			<div class="modal-dialog modal-xl" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h2 id="editMailDetailsModalTitle" class="modal-title h4" >Citizen Details</h2>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label for="submissionType">Submission type</label>
+							<input id="submissionType" list="submissionTypeList" name="submissionType" autofocus="autofocus" class="fw-15">
 							<datalist id="submissionTypeList">
 							  <option value="01 Application">
 							  <option value="02 Follow-up">
 							  <option value="03 Inventory received">
-							  <option value="04 Renewal">
+							  <option value="04 Payment">
+							  <option value="05 Renewal">
+							  <option value="06 Other">
 							</datalist>
-						<script>
-						  if (!("autofocus" in document.createElement("input"))) {
-							document.getElementById("submissionType").focus();
-						  }
-						</script>
-					</div>
-					<fieldset class="govns-fieldset form-group">
-						<legend class="govns-fieldset__legend govns-fieldset__legend--l label">
-						  <h2 class="govns-fieldset__heading">
-							<span class="label">Payment included?</span>
-						  </h2>
-						</legend>
-						<div class="govns-radios">
-						  <div class="govns-radios__item inline">
-							<input class="govns-radios__input" id="paymentIncluded" name="paymentIncluded" type="radio" value="yes" checked>
-							<label class="govns-label govns-radios__label" for="paymentIncluded">
-							  <span class="govns-label-span">Yes</span>
-							</label>
-						  </div>
-						  <div class="govns-radios__item inline">
-							<input class="govns-radios__input" id="paymentIncluded-2" name="paymentIncluded-2" type="radio" value="no">
-							<label class="govns-label govns-radios__label" for="paymentIncluded-2">
-							  <span class="govns-label-span">No</span>
-							</label>
-						  </div>
 						</div>
-					</fieldset>
-					<div class="form-group">
-						<label class="" for="paymentAmount">Payment amount</label>
-						<div class="input-group mb-3">
-						  <div class="input-group-prepend">
-							<span class="input-group-text" id="dolarSign">$</span>
-						  </div>
-						  <input type="text" class="fw-8" id="paymentAmount" aria-label="Canadian Dolars" aria-describedby="dolarSign">
+						<fieldset class="govns-fieldset form-group">
+							<legend class="govns-fieldset__legend govns-fieldset__legend--l label">
+							  <h2 class="govns-fieldset__heading">
+								<span class="label">Payment included?</span>
+							  </h2>
+							</legend>
+							<div class="govns-radios">
+							  <div class="govns-radios__item inline">
+								<input class="govns-radios__input" id="paymentIncluded" name="paymentIncluded" type="radio" value="yes" checked>
+								<label class="govns-label govns-radios__label" for="paymentIncluded">
+								  <span class="govns-label-span">Yes</span>
+								</label>
+							  </div>
+							  <div class="govns-radios__item inline">
+								<input class="govns-radios__input" id="paymentIncluded-2" name="paymentIncluded-2" type="radio" value="no">
+								<label class="govns-label govns-radios__label" for="paymentIncluded-2">
+								  <span class="govns-label-span">No</span>
+								</label>
+							  </div>
+							</div>
+						</fieldset>
+						<div class="form-group">
+							<label class="" for="paymentAmount">Payment amount</label>
+							<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+								<span class="input-group-text" id="dolarSign">$</span>
+							  </div>
+							  <input type="text" class="fw-8" id="paymentAmount" aria-label="Canadian Dolars" aria-describedby="dolarSign">
+							</div>
 						</div>
-					</div>
-					
-					<div class="form-group">
-						<label for="paymentType">Payment type</label>
-						<input id="paymentType" list="paymentTypeList" name="paymentTypeList" class="fw-15" >
+							
+						<div class="form-group">
+							<label for="paymentType">Payment type</label>
+							<input id="paymentType" list="paymentTypeList" name="paymentTypeList" class="fw-15" >
 							<datalist id="paymentTypeList">
-							  <option value="01 American Express">
-							  <option value="02 Cash">
-							  <option value="03 Cheque">
+							  <option value="01 Cash">
+							  <option value="02 Cheque">
+							  <option value="03 Credit">
 							  <option value="04 Debit">
-							  <option value="05 MasterCard">
-							  <option value="06 Money order">
-							  <option value="07 Visa">
+							  <option value="05 Money order">
 							</datalist>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn-default btn-lg" data-dismiss="modal">Save changes</button>
+						<button type="button" class="btn-2nd btn-lg" data-dismiss="modal">Close</button>
 					</div>
 				</div>
-			  <div class="modal-footer">
-				<button type="button" class="btn-default btn-lg" data-dismiss="modal">Save changes</button>
-				<button type="button" class="btn-2nd btn-lg" data-dismiss="modal">Close</button>
-			  </div>
-			  </div>
 			</div>
-		  </div><!--modal-->	
+		</div><!--modal-->	
 		
 	</body>
 	
