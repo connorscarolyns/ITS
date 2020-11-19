@@ -5,14 +5,12 @@
 		<link rel="shortlink" href="https://beta.novascotia.ca/">
 		
 		<title>Correspondence Details - Intake Tracking System - Government of Nova Scotia</title>
-
-		<link rel="stylesheet" media="all" href="https://novascotia.ca/clf/fonts/font-awesome/css/font-awesome.min.css">
 		
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> 
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+		<link rel="stylesheet" media="all" href="https://novascotia.ca/clf/fonts/font-awesome/css/font-awesome.min.css">		
 		<link rel="stylesheet" media="all" href="https://beta.novascotia.ca/sites/default/files/css/css_9m8-tA3IQf8ThlLQYTTZUyEweCvyR908Tg0XCbKYOfY.css">
 		<link rel="stylesheet" media="all" href="https://beta.novascotia.ca/sites/default/files/css/css_uIYN0sQV7NwuNKcH6_K57Yo4Nz26oGTDZHKB7WNNOwg.css">
 		<link rel="stylesheet" media="all" href="css/service-design.css">
@@ -184,6 +182,33 @@
 							</div>
 							<div class="summarycontent">
 								<section>
+									<!-- -------------------------- success toast ------------------------------------- -->					
+									<div aria-live="polite" aria-atomic="true">
+									  <!-- Position it -->
+									  <div style="position: absolute; top: 0; right: 0;">
+										   <div class="toast mt-3 hide" data-autohide="true" data-delay="1000"> 
+												<div class="toast-header text-success"> 
+													<strong class="mr-auto"><i class="fa fa-check-circle mr-1" aria-hidden="true"></i>Success!</strong>
+													<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+													  <span aria-hidden="true">&times;</span>
+													</button>
+												</div> 
+												<div class="toast-body"> 
+													Your changes have been saved
+												</div> 
+											</div> 
+										</div>
+									</div>  
+									 
+										<script> 
+											$(document).ready(function() { 
+												$(".triggerSuccess").click(function() { 
+													$('.toast').toast('show'); 
+												}); 
+											}); 
+										</script> 
+									<!-- -------------------------- End success toast ------------------------------------- -->	
+
 									<!-- Button trigger modal -->
 									<a type="button" class="summaryEdit" href="" data-toggle="modal" data-target="#programAreaModal">Edit</a>
 									<h3 for="summaryLabelProgramArea" class="summaryLabel label">Program Area</h3>
@@ -271,7 +296,12 @@
 							<option value="28 NSLC Registered Representative">
 							<option value="29 Home Construct Rebate">
 							<option value="30 First Time Homebuyer Rebate">
-						</datalist>
+						</datalist>						
+						<script> 
+							$('#programAreaModal').on('shown.bs.modal', function () {
+							$('#programArea').trigger('focus')
+							});
+						</script> 
 					</div>
 					<section>
 						<div class="row">
@@ -314,7 +344,7 @@
 					</section>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn-default btn-lg" data-dismiss="modal">Save changes</button>
+					<button type="button" class="btn-default btn-lg triggerSuccess" data-dismiss="modal">Save changes</button>
 					<button type="button" class="btn-2nd btn-lg" data-dismiss="modal">Close</button>
 				</div>
 			</div>
@@ -328,7 +358,7 @@
 		  <div class="modal-dialog modal-xl" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">
-				<h2 id="editCitizenDetailsModalTitle" class="modal-title h4" >Citizen Details</h2>
+				<h2 id="editCitizenDetailsModalTitle" class="modal-title h4" >Edit Citizen Details</h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>
@@ -336,7 +366,12 @@
 				<div class="modal-body">
 					<div class="form-group">
 						<label for="citizenDetailsName">Name</label>
-						<input id="citizenDetailsName" name="citizenDetailsName" autofocus="autofocus" class="fw-20" type="text">
+						<input id="citizenDetailsName" name="citizenDetailsName" autofocus="autofocus" class="fw-20" type="text">						
+						<script> 
+							$('#clientetialsModal').on('shown.bs.modal', function () {
+							$('#citizenDetailsName').trigger('focus')
+							});
+						</script> 
 					</div>
 					<div class="form-group">
 						<label for="citizenDetailsPhone">Phone</label>
@@ -349,25 +384,12 @@
 					</div>
 				</div>
 			  <div class="modal-footer">
-				<button type="button" class="btn-default btn-lg" data-dismiss="modal">Save changes</button>
+				<button type="button" class="btn-default btn-lg triggerSuccess" data-dismiss="modal">Save changes</button>
 				<button type="button" class="btn-2nd btn-lg" data-dismiss="modal">Close</button>
 			  </div>
 			  </div>
 			</div>
-		  </div><!--modal-->		
-
-		
-	
-			
-
+		  </div><!--modal-->
 	</body>
-	
-
-
-	<!-- JS code -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-	<!--JS below-->	
 
 </html>
