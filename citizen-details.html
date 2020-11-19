@@ -76,7 +76,7 @@
 									<div class="col-md-8">
 										<div class="form-group">
 											<label for="citizenDetailsName">Name</label>
-											<input name="citizenDetailsName" autofocus="autofocus" class="fw-20" type="text">
+											<input id="citizenDetailsName" name="citizenDetailsName" autofocus="autofocus" class="fw-20" type="text">
 											<script>
 											  if (!("autofocus" in document.createElement("input"))) {
 												document.getElementById("programAreaList").focus();
@@ -85,12 +85,12 @@
 										</div>
 										<div class="form-group">
 											<label for="citizenDetailsPhone">Phone</label>
-											<input name="citizenDetailsPhone1" id="form1" class="fw-10" type="tel">
-											<input name="citizenDetailsPhone2" id="form2" style="display: none;" >
+											<input name="citizenDetailsPhone1" id="citizenDetailsPhone" class="fw-10" type="tel">
+											<input name="citizenDetailsPhone2" id="citizenDetailsPhone-2" style="display: none;" >
 										</div>
 										<div class="form-group">
 											<label for="citizenDetailsEmail">Email</label>
-											<input name="citizenDetailsEmail" class="fw-20" type="email">
+											<input id="citizenDetailsEmail" name="citizenDetailsEmail" class="fw-20" type="email">
 										</div>
 									</div>
 								</section>
@@ -109,8 +109,8 @@
 					<!-- -------------------------------------------------- START aside --------------------------------------------------- -->	
 					<aside class="col-md-4">
 						<div class="summaryContainer">
-							<div class="summaryTitle">
-								<h2 style="color:transparent; margin:0; padding:0">Record Summary<h2><!-- SEMANTIC TITLE FOR SCREEN READERS-->
+							<div class="summaryTitle" aria-hidden=”true”>
+								<h2 aria-hidden=”true”>Record Summary</h2><!-- SEMANTIC TITLE FOR SCREEN READERS-->
 							</div>
 							<div class="summarycontent">
 								<section>
@@ -220,9 +220,9 @@
 	</div> <!-- /modal-->
 		
 	<script>
-	$("input[id='form1']").on("input", function () {
-				$("input[id='form2']").val(destroyMask(this.value));
-				this.value = createMask($("input[id='form2']").val());
+	$("input[id='citizenDetailsPhone']").on("input", function () {
+				$("input[id='citizenDetailsPhone-2']").val(destroyMask(this.value));
+				this.value = createMask($("input[id='citizenDetailsPhone-2']").val());
 			})
 
 			function createMask(string) {

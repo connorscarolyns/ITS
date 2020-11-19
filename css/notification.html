@@ -1,0 +1,44 @@
+<p>Dear {{customerFirstName}},  <br> <br>
+Thank you for booking an appointment with Access Nova Scotia.</p>
+
+<h2 style="font-size: 1.2em; margin-bottom: 6px;">You have booked</h2>
+<table> <tr>
+<td> What:</td> <td> {{serviceName}} appointment</td> </tr>
+<tr> <td> Where: </td> <td> <b>{{branchName}}</b> </td> </tr>
+<tr> <td> </td> <td> {{branchAddress1}} {{branchAddress2}}, {{branchCity}}, Nova Scotia {{branchPostcode}}</td> </tr>
+<tr> <td> When:</td><td> <b> {{date}}</b> at <b> {{time}}</b> </td> </tr>
+</table>
+ 
+<h3 style="margin-bottom: 0; font-size: 1em;"> Add this to your calendar </h3> 
+<p style="margin-top: 0;">Click the attached file to add this appointment to your personal calendar.</p> 
+<hr>
+<h2 style="font-size: 1.2em; margin-bottom: 6px;"> Be prepared for your visit</h2>
+<h3 style="margin-bottom: 0; font-size: 1em;">Arrive 10 minutes early</h3>
+<p style="margin-top: 0;">This helps us serve everyone on time.</P>
+<h3 style="margin-bottom: 0; font-size: 1em;">Bring a mask</h3>
+<p style="margin-top: 0;">Social distance and wear a non-medical face mask.</P>
+<h3 style="margin-bottom: 0; font-size: 1em;">Bring your cell phone</h3>
+<p style="margin-top: 0;">You can use your cell phone to check in when you arrive.</P>
+<h3 style="margin-bottom: 0; font-size: 1em;">If you don't have a cell phone</h3>
+<p style="margin-top: 0;">Check in with our team at the door.</p>
+<p>It's helpful to have your confirmation number with you.</p> 
+<p>Your confirmation # is<b> {{qWebBookId}}</b></P>
+
+<h2 style="font-size: 1.2em; margin-bottom: 6px;">What to do when you arrive</h2>
+<ol style="margin-bottom:12.0pt">
+<li><h3 style="margin-bottom: 0; font-size: 1em;">Check in with your cell phone</h3>
+<p style="margin-top: 0;">You can check in up to 10 minutes before your appointment.  When you arrive, click this <a href="http://10.250.58.70:81/appointment?appId={{appointmentPublicId}}"> check-in link </a> or the one in the confirmation or reminder text message to check in.</p></li>
+<li><h3 style="margin-bottom: 0; font-size: 1em;">You'll get a virtual ticket  </h3>
+<p style="margin-top: 0;">Once checked in, you'll see your ticket number and where you are in line on your phone.  Appointments get priority in line.</p></li>
+<li><h3 style="margin-bottom: 0; font-size: 1em;">Come inside and wait to be called </h3>
+<p style="margin-top: 0;">Ticket numbers will be called on screens inside.  We'll also send you a text when your number is being called.</p></li>
+</ol>
+
+<h2 style="font-size: 1.2em; margin-bottom: 6px;">How to cancel </h2>
+<p style="margin-top: 0;">If you can't make this appointment, use this link to 
+<a href="http://10.250.58.70:8090/qmaticwebbooking/index.html#/{{qWebBookId}}">
+cancel or reschedule. </a></p>
+<p><i>Please do not respond to this mail as it will go to an unmonitored mailbox.  </i></p>
+<p>We look forward to seeing you.</p>
+<img src=”http://as110.cio.gov.ns.ca/pictures/> <br>
+<b><font="+3">important - once QWB & MT are working, the hyperlinks in this message must be updated before go live.  Remove this comment when that is done! </font>
