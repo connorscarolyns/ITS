@@ -81,7 +81,9 @@
 												  <option value="01 Application">
 												  <option value="02 Follow-up">
 												  <option value="03 Inventory received">
-												  <option value="04 Renewal">
+												  <option value="04 Payment">
+												  <option value="05 Renewal">
+												  <option value="06 Other">
 												</datalist>
 											<script>
 											  if (!("autofocus" in document.createElement("input"))) {
@@ -124,13 +126,11 @@
 											<label for="paymentType">Payment type</label>
 											<input id="paymentType" list="paymentTypeList" name="paymentTypeList" class="fw-15" >
 												<datalist id="paymentTypeList">
-												  <option value="01 American Express">
-												  <option value="02 Cash">
-												  <option value="03 Cheque">
+												  <option value="01 Cash">
+												  <option value="02 Cheque">
+												  <option value="03 Credit">
 												  <option value="04 Debit">
-												  <option value="05 MasterCard">
-												  <option value="06 Money order">
-												  <option value="07 Visa">
+												  <option value="05 Money order">
 												</datalist>
 										</div>
 										<section class="row justify-content-md-left">
@@ -146,10 +146,12 @@
 										<section id="quickTypeSubmission" class="quickType">
 											<h3 id="quickTypeListSubmission" class="label">Quick Type: Submission Type</h3>
 											<ul class="quickTypeList" role="list" aria-labelledby="quickTypeListSubmission">
-												<li>01 Application</li>
-												<li>02 Follow-up</li>
-												<li>03 Inventory received</li>
-												<li>04 Renewal</li>
+											  <li>01 Application</li>
+											  <li>02 Follow-up</li>
+											  <li>03 Inventory received</li>
+											  <li>04 Payment</li>
+											  <li>05 Renewal</li>
+											  <li>06 Other</li>
 											</ul>
 										</section>
 										<section id="quickTyperadio" class="quickType">
@@ -161,13 +163,11 @@
 										<section id="quickTypepPayment" class="quickType">
 											<h3 id="quickTypeListPayment" class="label">Quick Type: Payment Type</h3>
 											<ul class="quickTypeList" role="list" aria-labelledby="quickTypeListPayment">
-												<li>01 American Express</li>
-												<li>02 Cash</li>
-												<li>03 Cheque</li>
-												<li>04 Debit</li>
-												<li>05 MasterCard</li>
-												<li>06 Money order</li>
-												<li>07 Visa</li>
+											  <li>01 Cash</li>
+											  <li>02 Cheque</li>
+											  <li>03 Credit</li>
+											  <li>04 Debit</li>
+											  <li>05 Money order</li>
 											</ul>
 										</section>
 									</div>
@@ -231,14 +231,14 @@
 	<div class="modal-dialog modal-xl" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
+				<h2 id="editProgramAreaModalTitle" class="modal-title h4" >Edit Program Area</h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
-				<h2 id="editProgramAreaModalTitle" class="h3" >Program Area</h2>
 				<div class="form-group">
-					<label id="programAreaLabel" for="programArea">Program Area</label>
+					<label id="programAreaLabel" for="programArea">Program area</label>
 					<input id="programArea" list="programAreaList" name="programArea" autofocus="autofocus" class="fw-30" >
 						<datalist id="programAreaList">
 							<option value="01 Elevator and Lifts">
@@ -328,12 +328,12 @@
 		  <div class="modal-dialog modal-xl" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">
+				<h2 id="editCitizenDetailsModalTitle" class="modal-title h4" >Citizen Details</h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>
 			  </div>
 				<div class="modal-body">
-					<h2 id="editCitizenDetailsModalTitle" class="h3" >Citizen Details</h2>
 					<div class="form-group">
 						<label for="citizenDetailsName">Name</label>
 						<input id="citizenDetailsName" name="citizenDetailsName" autofocus="autofocus" class="fw-20" type="text">
