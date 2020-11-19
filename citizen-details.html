@@ -122,11 +122,11 @@
 								</section>
 								<section>
 									<div class="summaryEdit summaryEdit summaryEditing">Editing</div>
-									<label for="summaryLabelCitizenName" class="summaryLabel">Name</label>
+									<h3 for="summaryLabelCitizenName" class="summaryLabel label">Name</h3>
 									<p id="summaryLabelCitizenName" class="summaryText">"Selected porgram area"</p>
-									<label for="summaryLabelCitizenPhone" class="summaryLabel">Phone</label>
+									<h3 for="summaryLabelCitizenPhone" class="summaryLabel label">Phone</h3>
 									<p id="summaryLabelCitizenPhone" class="summaryText">"Selected porgram area"</p>
-									<label for="summaryLabelCitizenEmail" class="summaryLabel">Email</label>
+									<h3 for="summaryLabelCitizenEmail" class="summaryLabel label">Email</h3>
 									<p id="summaryLabelCitizenEmail" class="summaryText">"Selected porgram area"</p>
 									<hr>
 								</section>
@@ -157,25 +157,45 @@
 			<div class="modal-body">
 				<div class="form-group">
 					<label id="programAreaLabel" for="programArea">Program Area</label>
-					<input list="programAreaList" name="programArea" autofocus="autofocus" class="fw-30" aria-describedby="help-text-quickType" >
+					<input id="programArea" list="programAreaList" name="programArea" autofocus="autofocus" class="fw-30" >
 						<datalist id="programAreaList">
-						  <option value="01 Accommodation Registry Co">
-						  <option value="02 Business Learning">
-						  <option value="03 Collections">
-						  <option value="04 Corporate Capital Tax">
-						  <option value="06 First Time Home Buyers">
-						  <option value="07 Financial Institution">
-						  <option value="08 Fishing Licensing">
-						  <option value="09 Fuel Tax">
-						  <option value="10 IFTA">
-						  <option value="11 Heating Assistance Rebate Pr">
+							<option value="01 Elevator and Lifts">
+							<option value="02 RJSC">
+							<option value="03 Business Licensing">
+							<option value="04 Road Safety">
+							<option value="05 IFTA">
+							<option value="06 Tax Exempt Consumer">
+							<option value="07 Vehicle Tax">
+							<option value="08 Refunds">
+							<option value="09 Fuel Tax">
+							<option value="10 Tobacco Tax">
+							<option value="11 Corporate Capital Tax">
+							<option value="12 Collections">
+							<option value="13 Special Move Permit">
+							<option value="14 Hunting License">
+							<option value="15 Hunting WRC">
+							<option value="16 Hunting Education Course">
+							<option value="17 Hunting Deer/Moose Draw">
+							<option value="18 Fishing License">
+							<option value="19 Farm Registration">
+							<option value="20 Fuel Safety">
+							<option value="21 Financial Institution">
+							<option value="22 Accommodation Registry Compliance">
+							<option value="23 Property Tax Rebate for Seniors">
+							<option value="24 Marriage License">
+							<option value="25 Your Energy Rebate Program">
+							<option value="26 Heating Assistance Rebate Program">
+							<option value="27 Registry of Motor Vehicles">
+							<option value="28 NSLC Registered Representative">
+							<option value="29 Home Construct Rebate">
+							<option value="30 First Time Homebuyer Rebate">
 						</datalist>
 					</div>
 					<section>
 						<div class="row">
 							<section id="quickTypepPayment" class="quickType col-md">
 								<h3 id="quickTypeListProgram" class="label">Quick Type: Program Area</h3>
-								<ul role="list" aria-labelledby="#quickTypeListProgram" class="col-md-12 programListColumn programList quickTypeList">
+								<ul role="list" class="col-md-12 programListColumn programList quickTypeList">
 									<li class="programListItem">01 Elevator and Lifts</li>
 									<li class="programListItem">02 RJSC</li>
 									<li class="programListItem">03 Business Licensing</li>
