@@ -37,36 +37,7 @@
 	display: -ms-flexbox;
 	display:flex;
 }
-.m-r-2{
-	margin-right: 20px;
-}
-.m-r-3{
-	margin-right: 30px;
-}
-.m-r-4{
-	margin-right: 40px;
-}
-.m-b-1{
-	margin-bottom: 10px;
-}
-.m-b-15{
-	margin-bottom: 15px;
-}
-.m-b-0{
-	margin-bottom: 0;	
-}
-.m-b-1{
-	margin-bottom: 10px;
-}
-.m-b-2{
-	margin-bottom: 20px;
-}
-.m-t-0{
-	margin-top:0;
-}
-.m-t-1{
-	margin-top:10px;
-}
+
 .step-list li::before {
     padding: 0px 0px;
     position: absolute;
@@ -251,7 +222,7 @@ input[type="text"], input[type="email"], input[type="number"], input[type="tel"]
 }
 input[type="text"]:hover, input[type="email"]:hover, input[type="number"]:hover, input[type="tel"]:hover, textarea:hover, input[list]:hover {
     outline: 4px solid #F8D44C;
-	transition: 0.3s;
+	transition: outline-width 0.2s ease;
 }
 input[type="text"], input[type="email"], input[type="number"], input[type="tel"], input[list] {
     height:2.3em
@@ -478,7 +449,7 @@ legend h1, legend h2, legend h3, legend h4, legend h5, h1.label, h2.label, h3.la
 }
 .card:hover {
 	outline: 4px solid #F8D44C;
-	transition: 0.3s;
+	transition: outline-width 0.2s ease;
 }
 .card .icon {
 	margin: 20px 0 10px 0;
