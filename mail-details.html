@@ -21,7 +21,7 @@
 	</head>
 
 	<body>
-		<div id="container">
+		<div class="Site" id="container">
 			<!-- -------------------------------------------------- START HEADER --------------------------------------------------- -->
 			<header>
 			<!-- START SALTIRE NS MOTHERSHIP RIBBON w FR -->
@@ -60,7 +60,7 @@
 			<!-- -------------------------------------------------- START MAIN CONTENT --------------------------------------------------- -->
 
 			<!--A basic page has a primary content area and an optional column for secondary information like related content.-->
-			<div class="container">
+			<div class="container Site-content">
 				<div class="row">
 					<main class="col-md-8"><!-- SEMANTIC MAIN TAG TO INDICATE PAGE CONTENT-->
 						<article ><!-- SEMANTIC ARTICLE TAG TO GROUP RELATED CONTENT-->
@@ -89,7 +89,7 @@
 											  }
 											</script>
 										</div>
-										<fieldset class="govns-fieldset form-group">
+<!-- 										<fieldset class="govns-fieldset form-group">
 											<legend class="govns-fieldset__legend govns-fieldset__legend--l label">
 											  <h2 class="govns-fieldset__heading">
 												<span class="label">Payment included?</span>
@@ -109,7 +109,30 @@
 												</label>
 											  </div>
 											</div>
-										</fieldset>
+										</fieldset> -->
+											<div class="govns-form-group">
+												  <fieldset class="govns-fieldset form-group">
+													<legend class="govns-fieldset__legend govns-fieldset__legend--m  label">
+													  <h3 class="govns-fieldset__heading">
+														Payment included?
+													  </h3>
+													</legend>
+													<div class="govns-radios">
+													  <div class="govns-radios__item inline">
+														<input class="govns-radios__input" id="payment" name="payment" type="radio" value="yes" checked>
+														<label class="govns-label govns-radios__label" for="payment">
+														  <span class="govns-label-span">Yes</span>
+														</label>
+													  </div>
+													  <div class="govns-radios__item inline">
+														<input class="govns-radios__input" id="payment-2" name="payment" type="radio" value="no">
+														<label class="govns-label govns-radios__label" for="payment-2">
+														  <span class="govns-label-span">No</span>
+														</label>
+													  </div>
+													</div>
+												  </fieldset>
+											</div>
 									  	<div class="form-group">
 											<label class="" for="paymentAmount">Payment amount</label>
 											<div class="input-group mb-3">
@@ -143,7 +166,7 @@
 									<div class="col-md-6">
 										<section id="quickTypeSubmission" class="quickType">
 											<h3 id="quickTypeListSubmission" class="label">Quick Type: Submission Type</h3>
-											<ul class="quickTypeList" role="list" aria-labelledby="quickTypeListSubmission">
+											<ul class="quickTypeList programListColumn submissionList" role="list" aria-labelledby="quickTypeListSubmission">
 											  <li>01 Application</li>
 											  <li>02 Follow-up</li>
 											  <li>03 Inventory received</li>
@@ -151,16 +174,16 @@
 											  <li>05 Renewal</li>
 											  <li>06 Other</li>
 											</ul>
-										</section>
+										</section><hr>
 										<section id="quickTyperadio" class="quickType">
 											<h3 id="quickTypeListRadio" class="label">Quick Type: Radio Buttons</h3>
 											<ul class="quickTypeList" role="list" aria-labelledby="quickTypeListRadio">
 												<li>Use your up / down arrow keys to switch between yes and no. Use tab to keep your selection and go to the next field</li>
 											</ul>
-										</section>
+										</section><hr>
 										<section id="quickTypepPayment" class="quickType">
 											<h3 id="quickTypeListPayment" class="label">Quick Type: Payment Type</h3>
-											<ul class="quickTypeList" role="list" aria-labelledby="quickTypeListPayment">
+											<ul class="quickTypeList programListColumn submissionList" role="list" aria-labelledby="quickTypeListPayment">
 											  <li>01 Cash</li>
 											  <li>02 Cheque</li>
 											  <li>03 Credit</li>
