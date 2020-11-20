@@ -598,13 +598,14 @@ legend h1, legend h2, legend h3, legend h4, legend h5, h1.label, h2.label, h3.la
 }
 .summaryTitle:before {
     content: "Record Summary";
-    position: absolute;
-    top: -35px;
-    z-index: 2;
     color: #fff;
-    left: 24px;
-    font-weight: 600;
     font-size: 1.15em;
+    font-weight: 600;
+    position: absolute;
+    width: 215px;
+    top: -35px;
+    left: 24px;
+    z-index: 2;
 }
 
 .summaryTitle:after {
