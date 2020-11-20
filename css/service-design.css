@@ -89,6 +89,17 @@
 	}
 }
 
+.icon-admin:before {
+    content: ' ';
+	display: inline-block;
+    background-image: url(../images/admin-icon-sm.svg);
+    background-size: 17px 17px;
+    height: 17px;
+    width: 17px;
+    margin-left: .5em;
+    top: 3px;
+    position: relative;
+}
 
 /* --------------------------------------secondary navigation------------------------------------------------- */
 .secondaryNav{
@@ -138,6 +149,9 @@
     margin: 0 auto 5px;
 }
 
+#nav #nav-home a:before {
+    background-image: url(../images/home-icon-sm.svg);
+}
 #nav #nav-add a:before {
     background-image: url(../images/add-icon-sm.svg);
 }
@@ -460,6 +474,7 @@ legend h1, legend h2, legend h3, legend h4, legend h5, h1.label, h2.label, h3.la
 	float: left;
 	border:0 solid white;
 	padding:8px;
+	margin-bottom: 1em;
 }
 .card:hover {
 	outline: 4px solid #F8D44C;
@@ -502,6 +517,10 @@ legend h1, legend h2, legend h3, legend h4, legend h5, h1.label, h2.label, h3.la
 
 .card .title.admin:after {
     background-image: url(../images/admin-icon-lg.svg);	
+}
+
+.card p{
+	margin-bottom: .6em;
 }
 
 /* --------------------------------------------end card ----------------------------------------------------- */
@@ -564,7 +583,16 @@ legend h1, legend h2, legend h3, legend h4, legend h5, h1.label, h2.label, h3.la
 
 
 /* --------------------------------------------Start sidebar ----------------------------------------------------- */
-
+.screen-reader-only{
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	clip: rect(1px 1px 1px 1px); // IE 6 and 7
+	clip: rect(1px,1px,1px,1px);
+	clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+	-webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+	overflow: hidden !important;	
+}
 .summaryContainer{
 	background-color: #dddddd;
 }
