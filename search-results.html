@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortlink" href="https://beta.novascotia.ca/">
 		
-		<title>Citizen Details - Intake Tracking System - Government of Nova Scotia</title>
+		<title>Search Results - Intake Tracking System - Government of Nova Scotia</title>
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
@@ -68,43 +68,84 @@
 				<div class="row">
 					<main class="col-md-8"><!-- SEMANTIC MAIN TAG TO INDICATE PAGE CONTENT-->
 						<article ><!-- SEMANTIC ARTICLE TAG TO GROUP RELATED CONTENT-->
-							<form name="parameters" method="GET"  target="_parent">
-								<div class="row">
-									<div class="col-md-12">
-										<h1 class="h2">Who is it from?</h1>
-									</div>
+							<h1 class="h2">Search Results</h1>
+							<section class="table-responsive">
+								<table id="myTable" class="table table-hover">
+								<caption>List of search results</caption>
+								  <thead>
+									<tr>
+									  <th scope="col">Name <i class="fa fa-sort ml-1" aria-hidden="true"></i></th>
+									  <th scope="col">Phone <i class="fa fa-sort ml-1" aria-hidden="true"></i></th>
+									  <th scope="col">Received <i class="fa fa-sort ml-1" aria-hidden="true"></i></th>
+									  <th scope="col">Program <i class="fa fa-sort ml-1" aria-hidden="true"></i></th>
+									  <th scope="col">Status <i class="fa fa-sort ml-1" aria-hidden="true"></i></th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr tabindex="0" class='clickable-row' data-href='url://'>
+									  <th scope="row">Jane Smith</th>
+									  <td>902-123-4567</td>
+									  <td>01/11/20</td>
+									  <td>Collections</td>
+									  <td>Pending processing</td>
+									</tr>
+									<tr tabindex="0" class='clickable-row' data-href='url://'>
+									  <th scope="row">Joe Smith</th>
+									  <td>902-123-4567</td>
+									  <td>01/11/20</td>
+									  <td>Collections</td>
+									  <td>Completed</td>
+									</tr>
+									<tr tabindex="0" class='clickable-row' data-href='url://'>
+									  <th scope="row">Jane Doe</th>
+									  <td>902-123-4567</td>
+									  <td>01/11/20</td>
+									  <td>Collections</td>
+									  <td>Pending processing</td>
+									</tr>
+									<tr tabindex="0" class='clickable-row' data-href='url://'>
+									  <th scope="row">Jim Doe</th>
+									  <td>902-123-4567</td>
+									  <td>01/11/20</td>
+									  <td>Collections</td>
+									  <td>Completed</td>
+									</tr>
+								  </tbody>
+								</table>
+								<script>$('#myTable').on('click', '.clickable-row', function(event) {
+									  if($(this).hasClass('active')){
+										$(this).removeClass('active'); 
+									  } else {
+										$(this).addClass('active').siblings().removeClass('active');
+									  }
+									});</script>
+							</section>
+							<section class="row justify-content-md-left mb-3">
+								<div class="col-auto">
+								<button class="btn-lg btn-default" onclick="location.href='method-details.html'" type="button">Edit Search</button>
 								</div>
-								<section class="row">
-									<div class="col-md-8">
-										<div class="form-group">
-											<label for="citizenDetailsName">Name</label>
-											<input id="citizenDetailsName" name="citizenDetailsName" autofocus="autofocus" class="fw-20" type="text">
-											<script>
-											  if (!("autofocus" in document.createElement("input"))) {
-												document.getElementById("programAreaList").focus();
-											  }
-											</script>
-										</div>
-										<div class="form-group">
-											<label for="citizenDetailsPhone">Phone</label>
-											<input name="citizenDetailsPhone1" id="citizenDetailsPhone" class="fw-10" type="tel">
-											<input name="citizenDetailsPhone2" id="citizenDetailsPhone-2" style="display: none;" aria-hidden="true">
-										</div>
-										<div class="form-group">
-											<label for="citizenDetailsEmail">Email</label>
-											<input id="citizenDetailsEmail" name="citizenDetailsEmail" class="fw-20" type="email">
-										</div>
-									</div>
-								</section>
-								<section class="row justify-content-md-left mb-3">
-									<div class="col-auto">
-									<button class="btn-lg btn-default" onclick="location.href='mail-details.html'" type="button">Continue</button>
-									</div>
-									<div class="col-auto">
-									<button class="btn-lg btn-2nd" onclick="location.href='index.html'" type="button">Cancel</button>
-									</div>
-								</section>
-							</form>
+								<div class="col-auto">
+								<button class="btn-lg btn-2nd" onclick="location.href='index.html'" type="button">New Search</button>
+								</div>
+							</section>
+							<section class="ns-form-group">
+							  <fieldset class="ns-fieldset">
+								<legend class="ns-fieldset__legend ns-fieldset__legend--l">
+								  <h2 class="ns-fieldset__heading h5">
+									Processing records?
+								  </h2>
+								</legend>
+								<div class="ns-checkboxes">
+								  <div class="ns-checkboxes__item">
+									<input class="ns-checkboxes__input" id="processing" name="processing" type="checkbox" value="carcasses">
+									<label class="ns-label ns-checkboxes__label noBold" for="processing">
+									  Check this box to automatically be returned to search when processing in completed
+									</label>
+								  </div>
+								</div>
+
+							  </fieldset>
+							</section>
 						</article>
 					</main><!-- END main content  -->
 
@@ -143,17 +184,16 @@
 										</script> 
 									<!-- -------------------------- End success toast ------------------------------------- -->	
 									<!-- Button trigger modal -->
-									<a type="button" class="summaryEdit" href="" data-toggle="modal" data-target="#programAreaModal">Edit</a>
-									<h3 for="summaryLabelProgramArea" class="summaryLabel label">Program Area</h3>
-									<p id="summaryLabelProgramArea" class="summaryText">"Selected porgram area"</p>
-									<hr>
-								</section>
+									
+									<h3 for="summaryLabelProgramArea" class="summaryLabel label">ITS Number</h3>
+									<p id="summaryLabelProgramArea" class="summaryText">"1234"</p>
+									
 								<section class="ns-form-group">
 								  <!-- start NS toggle -->
-								  <fieldset class="ns-toggle--ui-switch ns-fieldset form-group">
+								  <fieldset class="ns-toggle--ui-switch ns-fieldset">
 									<legend class="ns-fieldset__legend ns-fieldset__legend--m  label">
 									  <h3 class="ns-fieldset__heading">
-										Payment included?
+										Record Status
 									  </h3>
 									</legend>
 									<input type="checkbox" id="demo5" class="ns-toggle__input">
@@ -171,16 +211,40 @@
 									 </label>
 								   </fieldset>
 								   <!-- end NS toggle -->
+									<hr>
 								</section>
 								<section>
-									<div class="summaryEdit summaryEdit summaryEditing">Editing</div>
+									<a type="button" class="summaryEdit" href="" data-toggle="modal" data-target="#mailDetailssModal">Edit</a>
 									<h3 for="summaryLabelCitizenName" class="summaryLabel label">Name</h3>
-									<p id="summaryLabelCitizenName" class="summaryText">"Selected porgram area"</p>
+									<p id="summaryLabelCitizenName" class="summaryText">"Entered name"</p>
 									<h3 for="summaryLabelCitizenPhone" class="summaryLabel label">Phone</h3>
-									<p id="summaryLabelCitizenPhone" class="summaryText">"Selected porgram area"</p>
+									<p id="summaryLabelCitizenPhone" class="summaryText">"Entered phone number"</p>
 									<h3 for="summaryLabelCitizenEmail" class="summaryLabel label">Email</h3>
-									<p id="summaryLabelCitizenEmail" class="summaryText">"Selected porgram area"</p>
+									<p id="summaryLabelCitizenEmail" class="summaryText">"Entered email address"</p>
 									<hr>
+								</section>
+								<section>
+									<a type="button" class="summaryEdit" href="" data-toggle="modal" data-target="#mailDetailssModal">Edit</a>
+									<h3 for="summaryLabelMailDetailsSubmissionType" class="summaryLabel label">Submission type</h3>
+									<p id="summaryLabelMailDetailsSubmissionType" class="summaryText">"Selected Submission Type"</p>
+									<h3 for="summaryLabelMailDetailsPaymentAmount" class="summaryLabel label">Payment Amount</h3>
+									<p id="summaryLabelMailDetailsPaymentAmount" class="summaryText">"Entered Payment Amount"</p>
+									<h3 for="summaryLabelMailDetailsPaymentType" class="summaryLabel label">Payment Type</h3>
+									<p id="summaryLabelMailDetailsPaymentType" class="summaryText">"Selected Payment Type"</p>
+									<hr>
+								</section>
+								<section>
+									<a type="button" class="summaryEdit" href="" data-toggle="modal" data-target="#mailDetailssModal">Edit</a>
+									<h3 for="summaryLabelMethodDetailsMethod" class="summaryLabe label">Method Recieved</h3>
+									<p id="summaryLabelMethodDetailsMethod" class="summaryText">"Selected Method Recieved"</p>
+									<h3 for="summaryLabelMethodDetailsDate" class="summaryLabel label">Date Recieved</h3>
+									<p id="summaryLabelMethodDetailsDate" class="summaryText">"Entered Date Recieved"</p>
+									<hr>
+								</section>
+								<section>
+									<a type="button" class="summaryEdit" href="" data-toggle="modal" data-target="#mailDetailssModal">Edit</a>
+									<h3 for="summaryLabelMethodDetailsMethod" class="summaryLabe label">Program zrea</h3>
+									<p id="summaryLabelMethodDetailsMethod" class="summaryText">"Entered program area"</p>
 								</section>
 							</div>
 						</div>
