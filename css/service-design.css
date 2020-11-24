@@ -877,6 +877,9 @@ label.ns-checkboxes__label.noBold{
 table, .table {
     color:#444444;
 }
+table caption {
+    color: #444444;
+}
 
 .clickable-row:focus {
 	outline: 4px solid #F8D44C;
