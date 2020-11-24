@@ -254,7 +254,7 @@ legend.label{
 	font-family: "open_sansbold",Helvetica,Arial,Tahoma,sans-serif;
 }
 
-legend h1, legend h2, legend h3, legend h4, legend h5, h1.label, h2.label, h3.label, h4.label, h5.label  {
+legend h1, legend h2, legend h3, legend h4, legend h5, legend h6, h1.label, h2.label, h3.label, h4.label, h5.label  {
     margin: 0;
     font-size: 1em;
     line-height: 1.6875;
@@ -263,6 +263,10 @@ legend h1, legend h2, legend h3, legend h4, legend h5, h1.label, h2.label, h3.la
 	border-bottom: 0;
 	color: #444;
 	font-family: "open_sansbold",Helvetica,Arial,Tahoma,sans-serif;
+	
+}
+legend.noBorder{
+	border-bottom: 0 !important;
 }
 
 .ns-radios__item {
@@ -545,6 +549,7 @@ label.ns-checkboxes__label.noBold{
     padding-right: 15px;
     padding-left: 15px;
 }
+
 .ns-checkboxes__input:focus + .ns-checkboxes__label:before, .ns-checkboxes__input:hover + .ns-checkboxes__label:before  {
     /* border-width: 4px; */
     -webkit-box-shadow: 0 0 0 3px #F8D44C;
@@ -623,12 +628,12 @@ label.ns-checkboxes__label.noBold{
     clear: both;
 }
 .ns-checkboxes--small .ns-checkboxes__item:hover .ns-checkboxes__input:not(:disabled) + .ns-checkboxes__label:before {
-    -webkit-box-shadow: 0 0 0 10px #b1b4b6;
-    box-shadow: 0 0 0 10px #b1b4b6;
+    -webkit-box-shadow: 0 0 0 10px #F8D44C;
+    box-shadow: 0 0 0 5px #F8D44C;
 }
 .ns-checkboxes--small .ns-checkboxes__item:hover .ns-checkboxes__input:focus + .ns-checkboxes__label:before {
-    -webkit-box-shadow: 0 0 0 3px #fd0, 0 0 0 10px #b1b4b6;
-    box-shadow: 0 0 0 3px #fd0, 0 0 0 10px #b1b4b6;
+    -webkit-box-shadow: 0 0 0 3px #F8D44C, 0 0 0 10px #F8D44C;
+    box-shadow: 0 0 0 3px #F8D44C, 0 0 0 5px #F8D44C;
 }
 @media (hover: none), (pointer: coarse) {
     .ns-checkboxes--small .ns-checkboxes__item:hover .ns-checkboxes__input:not(:disabled) + .ns-checkboxes__label:before {
@@ -636,8 +641,8 @@ label.ns-checkboxes__label.noBold{
         box-shadow: initial;
     }
     .ns-checkboxes--small .ns-checkboxes__item:hover .ns-checkboxes__input:focus + .ns-checkboxes__label:before {
-        -webkit-box-shadow: 0 0 0 3px #fd0;
-        box-shadow: 0 0 0 3px #fd0;
+        -webkit-box-shadow: 0 0 0 3px #F8D44C;
+        box-shadow: 0 0 0 3px #F8D44C;
     }
 }
 
